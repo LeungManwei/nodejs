@@ -8,7 +8,7 @@ RUN apt-get install -y curl wget tar bzip2 unzip vim passwd sudo hostname net-to
 
 
 RUN cd ~ && wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.xz
-RUN cd ~ tar xvf node-v6.2.0-linux-x64.tar.xz && sudo cd node-v6.2.0-linux-x64
+RUN cd ~ && tar xvf node-v6.2.0-linux-x64.tar.xz && sudo cd node-v6.2.0-linux-x64
 RUN sudo ln -s /root/node-v6.2.0-linux-x64/bin/node /usr/local/bin/node && sudo ln -s /root/node-v6.2.0-linux-x64/bin/npm /usr/local/bin/npm
 RUN cd ~
 EXPOSE 80
