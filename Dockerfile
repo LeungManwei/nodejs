@@ -3,8 +3,6 @@ MAINTAINER manwei manwei@alauda.cn
 
 RUN apt-get update
 RUN apt-get install -y curl wget tar bzip2 unzip vim passwd sudo hostname net-tools rsync man
-
-RUN node -v && npm -v
 EXPOSE 80
 COPY server.js /
 CMD ["cd","~"]
