@@ -1,11 +1,7 @@
-FROM ubuntu:16.04
+FROM ubuntu:trusty
 MAINTAINER manwei manwei@alauda.cn
 
-RUN apt-get update
-RUN wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.xz
-RUN tar xvf node-v6.2.0-linux-x64.tar.xz
-RUN cd node-v6.2.0-linux-x64
-RUN ln -s /root/node-v6.2.0-linux-x64/bin/node /usr/local/bin/node && ln -s /root/node-v6.2.0-linux-x64/bin/npm /usr/local/bin/npm
+RUN apt-get update && sudo wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.xz && sudo tar xvf node-v6.2.0-linux-x64.tar.xz && sudo cd node-v6.2.0-linux-x64 && sudo ln -s /root/node-v6.2.0-linux-x64/bin/node /usr/local/bin/node && sudo ln -s /root/node-v6.2.0-linux-x64/bin/npm /usr/local/bin/npm
 RUN node -v && npm -v
 EXPOSE 80
 COPY server.js /
