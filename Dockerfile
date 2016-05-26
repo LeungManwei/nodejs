@@ -9,7 +9,7 @@ RUN cd /opt && \
 
 wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.gz && \
 ls && \
-tar xvf node-v6.2.0-linux-x64.tar.xz && \
+tar xvf node-v6.2.0-linux-x64.tar.gz && \
 mv node-v6.2.0-linux-x64 node && \
 cd /usr/local/bin && \
 ln -s /opt/node/bin/ * . && \
