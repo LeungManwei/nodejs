@@ -5,7 +5,7 @@ RUN apt-get update
 #安装各种工具
 RUN apt-get install -y curl wget tar bzip2 unzip vim passwd sudo hostname net-tools rsync man
 #下载nodejs
-cd /opt && \
+RUN cd /opt && \
 
 wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.xz && \
 
