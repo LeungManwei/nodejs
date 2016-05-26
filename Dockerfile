@@ -13,5 +13,6 @@ ln -s /opt/node-v6.2.0-linux-x64/bin/npm /usr/local/bin/npm && \
 rm -f /opt/node-v6.2.0-linux-x64.tar.gz
 
 EXPOSE 80
-COPY server.js /root
+WORKDIR   /
+COPY server.js /
 CMD ["node", "server.js"]
