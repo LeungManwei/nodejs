@@ -7,7 +7,7 @@ RUN apt-get install -y curl wget tar bzip2 unzip vim passwd sudo hostname net-to
 #下载nodejs
 RUN cd /opt && \
 
-wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.xz && \
+wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.gz && \
 ls && \
 tar xvf node-v6.2.0-linux-x64.tar.xz && \
 mv node-v6.2.0-linux-x64 node && \
